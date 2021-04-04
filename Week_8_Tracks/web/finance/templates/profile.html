@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+    <h1>Welcome, {{ username }}</h1>
+    <a href="/change_password"><button class="btn btn-primary">Change Password</button></a>
+    <a href="/delete"><button class="btn btn-danger">Delete Account</button></a>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td><strong>${{ total_cash }}</strong></td>
+            </tr>
+        </tfoot>
+        <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>${{ row[4] }}</td>
+                    <td>${{ row[3]*row[4] }}</td>
+                </tr>
+                {% endfor %}
+
+            <tr>
+                <td colspan="4" style="text-align: left">CASH</td>
+                <td>${{ cash }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
