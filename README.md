@@ -66,8 +66,8 @@
 │       ├── 8.sql  
 │       └── 9.sql  
 └── Week_8_Tracks  
-    └── web
-        ├── finance
+    └── web  
+        ├── finance  
         └── homepage  
   
 24 directories, 43 files  
